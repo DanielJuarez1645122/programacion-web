@@ -1,7 +1,7 @@
 # Realización de la tarea
 
 ## Experiencia
-Realmente me llevo un par de horas hacer la tarea, solamente tuve dificultades con los margenes de el formulario y un poco del responsive.
+Realmente me llevo un par de horas hacer la tarea, solamente tuve dificultades con los margenes de el formulario y un poco del responsive. Creo que tambien cabe resaltar que ya he tenido experiencia en paginas web con HTML y CSS, en todo basicos hice y por eso me tarde muy poco tiempo en hacerlo, use 'funciones' como las nth en el estilo.
 
 ## Realización
 Primero realice el HTML y el CSS, eligi el inicio de sesion de netflix, simplemente visualice como estaba estructurado y vi que era solamente el body junto al footer, en el body simplemente agrege un contenedor que contendra el logo de netflix y el formulario del inicio de sesion, para el footer solamente use un parrafo y una lista desordenada que contendra diferentes etiquetas 'a'.
