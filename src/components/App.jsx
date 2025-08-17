@@ -29,12 +29,22 @@ function App() {
   return (
     <div>
       <Title />
+      <div className="father">
       {pokemonList.map(pokemon => (
-        <div key={pokemon.id}>
-          <h2>{pokemon.name}</h2>
+        <div className='item' key={pokemon.id}>
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+          <h2>{pokemon.name}</h2>
+          <div className="pokemon-types">
+          <h5>Tipo</h5>
+            {pokemon.types.map((t) => (
+              <span key={t.slot}>
+                {`|${t.type.name}|`}
+              </span>
+            ))}
+          </div>
         </div>
       ))}
+      </div>
     </div>
   );
 }
