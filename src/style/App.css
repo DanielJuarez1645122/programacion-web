@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: "Roboto", sans-serif;
+}
+
+.app h1{
+  color: #FFF;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group input {
+  font-size: 1rem;
+}
+
+.input-group button {
+  background-color: #159A9C;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #DEEFE7;
+}
+
+.task button{
+  background-color: #B4BEC9;
+  border: none;
+  margin: 0px 2px;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.filters button {
+  background-color: #B4BEC9;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 5px;
+}
