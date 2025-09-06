@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # type: ignore
 
 class Autor(models.Model):
     nombre = models.CharField(max_length=100)
@@ -14,3 +14,11 @@ class Libro(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+class Editorial(models.Model):
+    nombre = models.CharField(max_length=100)
+    pais = models.CharField(max_length=50)
+    libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nombre
