@@ -22,3 +22,11 @@ class Editorial(models.Model):
 
     def __str__(self):
         return self.nombre
+
+class Resena(models.Model):
+    texto = models.TextField()
+    calificacion = models.IntegerField()
+    editorial = models.ForeignKey(Editorial, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Resena {self.id}"
