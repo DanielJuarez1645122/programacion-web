@@ -1,12 +1,23 @@
-# React + Vite
+# Evidencias
+<img width="677" height="347" alt="image" src="https://github.com/user-attachments/assets/304ab47d-3536-4894-ad50-fc08bf0ca2d4" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Filtros
 
-Currently, two official plugins are available:
+<img width="563" height="289" alt="image" src="https://github.com/user-attachments/assets/937399c9-2c01-4912-9297-3c03c14007a1" />
+<img width="496" height="276" alt="image" src="https://github.com/user-attachments/assets/64d5c7de-14ad-4e25-ad6b-f377a3002c16" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Eliminar
 
-## Expanding the ESLint configuration
+<img width="498" height="288" alt="image" src="https://github.com/user-attachments/assets/dd5b3352-08c4-4563-a717-73fb5e3792d8" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Hooks
+
+## useState
+
+<img width="725" height="262" alt="image" src="https://github.com/user-attachments/assets/97fc8648-0579-45ce-b184-fd0e8c9602ae" />
+Este principalmente sirve para guardar y actualizar informacion, en este caso me esta sirviendo para guardar las tareas, el nombre de la nueva tarea y el filtro que seleccione
+
+## useEffect
+
+<img width="836" height="95" alt="image" src="https://github.com/user-attachments/assets/acc770b2-b61d-4534-89dd-626549cf32c2" />
+Este se activa cada vez que cambia el componente y permite ejecutar codigo, este me sirvio para guardar los datos en el localStorage
