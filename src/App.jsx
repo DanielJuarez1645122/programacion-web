@@ -1,63 +1,35 @@
-import { useState, useEffect } from "react";
-import List from "./components/list";
-import "./style/App.css";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  const [tasks, setTasks] = useState(() => {
-    const saved = localStorage.getItem("tasks");
-    return saved ? JSON.parse(saved) : [];
-  });
-
-  const [taskName, setTaskName] = useState("");
-  const [filter, setFilter] = useState("Todas");
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
-  const addTask = () => {
-    if (!taskName.trim()) return;
-    const newTask = {
-      id: Date.now(),
-      name: taskName,
-      completed: false,
-    };
-    setTasks([...tasks, newTask]);
-    setTaskName("");
-  };
-
-  const toggleTask = (id) => {
-    setTasks(
-      tasks.map((t) => (t.id === id ? { ...t, completed: !t.completed } : t))
-    );
-  };
-
-  const deleteTask = (id) => {
-    setTasks(tasks.filter((t) => t.id !== id));
-  };
+  const [count, setCount] = useState(0)
 
   return (
-    <div class="app">
-      <h1>Gestión de Tareas</h1>
-      <div class="input-group">
-        <input
-          type="text"
-          value={taskName}
-          onChange={(e) => setTaskName(e.target.value)}
-          placeholder="Nueva tarea"
-        />
-        <button onClick={addTask}>Agregar</button>
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-
-      <div class="filters">
-        <button onClick={() => setFilter("Todas")}>Todas</button>
-        <button onClick={() => setFilter("Pendientes")}>Pendientes</button>
-        <button onClick={() => setFilter("Completadas")}>Completadas</button>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
       </div>
-
-      <List tasks={tasks} filter={filter} onToggle={toggleTask} onDelete={deleteTask} />
-    </div>
-  );
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App
