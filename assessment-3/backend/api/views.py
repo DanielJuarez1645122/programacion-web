@@ -13,6 +13,8 @@ def ocultar_secreto(request):
             if not secreto:
                 return JsonResponse({"error": "No se proporcionó ningún secreto"}, status=400)
             key = str(uuid.uuid4())
+            while r.exists(key):
+                key = str(uuid.uuid4())
             r.set(key, secreto)
             return JsonResponse({"key": key})
         except json.JSONDecodeError:
