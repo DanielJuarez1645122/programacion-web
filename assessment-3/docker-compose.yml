@@ -3,8 +3,12 @@ services:
     build:
       context: .
       dockerfile: dockerfile.backend
+    container_name: assessment-3-backend
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend:/app
     depends_on:
       - redis
 
@@ -12,6 +16,8 @@ services:
     build:
       context: .
       dockerfile: dockerfile.frontend
+    container_name: assessment-3-frontend
+    command: npm run dev
     ports:
       - "5173:5173"
     depends_on:
@@ -22,12 +28,16 @@ services:
 
   redis:
     image: redis:7
+    container_name: assessment-3-redis
     ports:
       - "6379:6379"
 
   redis-commander:
     image: rediscommander/redis-commander:latest
+    container_name: assessment-3-redis-commander
     environment:
       - REDIS_HOSTS=local:redis:6379
     ports:
       - "8081:8081"
+    depends_on:
+      - redis
