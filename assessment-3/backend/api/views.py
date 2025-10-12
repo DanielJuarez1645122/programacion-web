@@ -25,8 +25,9 @@ def revelar_secreto(request, key):
     if request.method == "GET":
         secreto = r.get(key)
         if secreto:
+            r.delete(key)
             return JsonResponse({"secreto": secreto.decode()})
         else:
-            return JsonResponse({"error": "Secreto no encontrado"}, status=404)
+            return JsonResponse({"error": "Secreto no encontrado o ya revelado"}, status=404)
     else:
-        return JsonResponse({"error": "Use GET para revelar secretos"}, status=405)
+        return JsonResponse({"error": "Algo sucedio"}, status=405)
